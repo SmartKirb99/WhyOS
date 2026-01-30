@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://bam7avfm70fo0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo4sj"]
+transparency = 1
+
+[sub_resource type="TorusMesh" id="TorusMesh_smq7f"]
+material = SubResource("StandardMaterial3D_wo4sj")
+
+[sub_resource type="SphereMesh" id="SphereMesh_wo4sj"]
+radial_segments = 6
+rings = 6
+
+[sub_resource type="Animation" id="Animation_wo4sj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torus:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.42108476, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sphere 1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.61474663, 0.6275767, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sphere 2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5783949, 1.3506302, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sphere 3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.59248, 0.6275767, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sphere 4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.62883174, 1.3506302, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sphere 5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00810653, 1.7431272, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_smq7f"]
+resource_name = "Spinning"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torus:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.42108476, 0), Vector3(-0.6519959, 0.6354221, 0), Vector3(-0.5789554, 1.2927884, 0), Vector3(0.00537014, 1.7264675, 0), Vector3(0.6033907, 1.3521339, 0), Vector3(0.6033907, 0.73447245, 0), Vector3(0, 0.42108476, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sphere 1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.61474663, 0.6275767, 0), Vector3(-0.58293605, 1.326143, 0), Vector3(0.010519505, 1.736997, 0), Vector3(0.6085403, 1.3580985, 0), Vector3(0.60854024, 0.7189925, 0), Vector3(-0.025095046, 0.27172053, 0), Vector3(-0.61474663, 0.6275767, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sphere 2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.5783949, 1.3506302, 0), Vector3(0.008807778, 1.743217, 0), Vector3(0.6113936, 1.3734485, 0), Vector3(0.58856833, 0.70238715, 0), Vector3(-0.027712464, 0.27327305, 0), Vector3(-0.63472474, 0.6406751, 0), Vector3(-0.5783949, 1.3506302, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sphere 3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.59248, 0.6275767, 0), Vector3(-0.01923579, 0.30802363, 0), Vector3(-0.6492118, 0.60475147, 0), Vector3(-0.60812646, 1.2986381, 0), Vector3(-0.00097566843, 1.7368823, 0), Vector3(0.61136097, 1.294935, 0), Vector3(0.59248, 0.6275767, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sphere 4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.62883174, 1.3506302, 0), Vector3(0.6470922, 0.77086973, 0), Vector3(-0.0011438131, 0.29154027, 0), Vector3(-0.6265546, 0.7069591, 0), Vector3(-0.6128596, 1.2730246, 0), Vector3(-0.005847335, 1.794842, 0), Vector3(0.62883174, 1.3506302, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sphere 5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.00810653, 1.7431272, 0), Vector3(0.6198221, 1.3870538, 0), Vector3(0.5924321, 0.7022972, 0), Vector3(-0.023848712, 0.2777481, 0), Vector3(-0.6355645, 0.63382155, 0), Vector3(-0.6355645, 1.2940804, 0), Vector3(0.00810653, 1.7431272, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vkuv"]
+_data = {
+&"RESET": SubResource("Animation_wo4sj"),
+&"Spinning": SubResource("Animation_smq7f")
+}
+
+[node name="Bunch of Circles" type="Node3D" unique_id=85390020]
+
+[node name="Torus" type="MeshInstance3D" parent="." unique_id=932851512]
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0, 0.42108476, 0)
+mesh = SubResource("TorusMesh_smq7f")
+
+[node name="Sphere 1" type="MeshInstance3D" parent="." unique_id=842460405]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, -0.61474663, 0.6275767, 0)
+mesh = SubResource("SphereMesh_wo4sj")
+
+[node name="Sphere 2" type="MeshInstance3D" parent="." unique_id=1511832939]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, -0.5783949, 1.3506302, 0)
+mesh = SubResource("SphereMesh_wo4sj")
+
+[node name="Sphere 3" type="MeshInstance3D" parent="." unique_id=339269677]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0.59248, 0.6275767, 0)
+mesh = SubResource("SphereMesh_wo4sj")
+
+[node name="Sphere 4" type="MeshInstance3D" parent="." unique_id=1412682716]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0.62883174, 1.3506302, 0)
+mesh = SubResource("SphereMesh_wo4sj")
+
+[node name="Sphere 5" type="MeshInstance3D" parent="." unique_id=942848584]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0.00810653, 1.7431272, 0)
+mesh = SubResource("SphereMesh_wo4sj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1005971035]
+libraries/ = SubResource("AnimationLibrary_1vkuv")
+autoplay = &"Spinning"

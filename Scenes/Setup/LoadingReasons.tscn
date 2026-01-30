@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ns8hwpypko51"]
+
+[ext_resource type="PackedScene" uid="uid://dhb16d23exubg" path="res://Scenes/User/User.tscn" id="1_jmia7"]
+[ext_resource type="FontFile" uid="uid://b12hmkpmvyd32" path="res://Fonts/UNIFRAKTURCOOK-BOLD.TTF" id="1_pyd1l"]
+[ext_resource type="PackedScene" uid="uid://bam7avfm70fo0" path="res://Scenes/Setup/LoadingCircle.tscn" id="3_0rn62"]
+[ext_resource type="Script" uid="uid://ciueivr4xse6r" path="res://Scripts/Setup/LoadIntoLoginOrSetup.gd" id="4_bpkmv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sq45"]
+cull_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_14p47"]
+material = SubResource("StandardMaterial3D_1sq45")
+
+[node name="Node3D" type="Node3D" unique_id=541252205]
+
+[node name="Room" type="MeshInstance3D" parent="." unique_id=1120660215]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("SphereMesh_14p47")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2137140253]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -2.639751, 0.14667892)
+
+[node name="Camera3D" parent="." unique_id=2026353731 instance=ExtResource("1_jmia7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.39862096)
+
+[node name="OS Name" type="Label3D" parent="." unique_id=1002340330]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.5, 0, 0.49093723, -1.3057353)
+modulate = Color(1, 0, 0, 1)
+outline_modulate = Color(1, 1, 1, 1)
+text = "WhyOS"
+font = ExtResource("1_pyd1l")
+font_size = 670
+
+[node name="Bunch of Circles" parent="." unique_id=85390020 instance=ExtResource("3_0rn62")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.04973924, -0.9681913, -1.1129376)
+script = ExtResource("4_bpkmv")
+
+[node name="Sequel To" type="Label3D" parent="." unique_id=159747923]
+transform = Transform3D(-0.25, 0, -3.774895e-08, 0, 0.25, 0, 3.774895e-08, 0, -0.25, 0, 0, 0.77056634)
+modulate = Color(1, 0, 0, 1)
+text = "The sequel to PainOS"
+font_size = 64
