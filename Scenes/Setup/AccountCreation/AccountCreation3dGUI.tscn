@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b06ejsomgq1sf"]
+
+[ext_resource type="Script" uid="uid://dkne12vklq8cv" path="res://Scripts/Setup/AccountCreation/3dGui.gd" id="1_14juo"]
+[ext_resource type="PackedScene" uid="uid://bu41mb1104xfe" path="res://Scenes/Setup/AccountCreation/AccountCreationGUI.tscn" id="1_l8mkj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_14juo"]
+size = Vector2(1.92, 1.08)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_14juo"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a40n"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_14juo")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3a40n"]
+size = Vector3(1.927002, 1.1208496, 0.05718994)
+
+[node name="AccountCreation3dGui" type="Node3D" unique_id=2106512666]
+script = ExtResource("1_14juo")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1287357749]
+size = Vector2i(1920, 1080)
+
+[node name="AccountCreationGui" parent="SubViewport" unique_id=1034973352 instance=ExtResource("1_l8mkj")]
+
+[node name="Quad" type="MeshInstance3D" parent="." unique_id=1411882479]
+layers = 2
+mesh = SubResource("QuadMesh_14juo")
+surface_material_override/0 = SubResource("StandardMaterial3D_3a40n")
+
+[node name="Area3D" type="StaticBody3D" parent="Quad" unique_id=1100823179]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Quad/Area3D" unique_id=836790473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0028076172, -0.004272461, -0.002105713)
+shape = SubResource("BoxShape3D_3a40n")
+debug_fill = false

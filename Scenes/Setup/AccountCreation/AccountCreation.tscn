@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c1yqc87vphh4g"]
+
+[ext_resource type="PackedScene" uid="uid://b06ejsomgq1sf" path="res://Scenes/Setup/AccountCreation/AccountCreation3dGUI.tscn" id="1_l0b5l"]
+[ext_resource type="PackedScene" uid="uid://dhb16d23exubg" path="res://Scenes/User/User.tscn" id="2_37vx6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejchf"]
+cull_mode = 1
+albedo_color = Color(0, 0, 0.3019608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2t4d3"]
+material = SubResource("StandardMaterial3D_ejchf")
+
+[node name="Node3D" type="Node3D" unique_id=1214272026]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=799955902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.2941456, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1286221637]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, -4.2941456, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="." unique_id=462083434]
+transform = Transform3D(1, 0, 0, 0, 1.3113416e-07, 1, 0, -1, 1.3113416e-07, 0, -4.2941456, 0)
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="." unique_id=792679052]
+transform = Transform3D(1, 0, 0, 0, -0.027415937, -0.99962413, 0, 0.99962413, -0.027415937, 0, -4.2941456, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1845314924]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("SphereMesh_2t4d3")
+
+[node name="AccountCreation3dGui" parent="." unique_id=2106512666 instance=ExtResource("1_l0b5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2751373)
+
+[node name="Camera3D" parent="." unique_id=2026353731 instance=ExtResource("2_37vx6")]

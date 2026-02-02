@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dhb16d23exubg" path="res://Scenes/User/User.tscn" id="1_jmia7"]
 [ext_resource type="FontFile" uid="uid://b12hmkpmvyd32" path="res://Fonts/UNIFRAKTURCOOK-BOLD.TTF" id="1_pyd1l"]
-[ext_resource type="PackedScene" uid="uid://bam7avfm70fo0" path="res://Scenes/Setup/LoadingCircle.tscn" id="3_0rn62"]
-[ext_resource type="Script" uid="uid://ciueivr4xse6r" path="res://Scripts/Setup/LoadIntoLoginOrSetup.gd" id="4_bpkmv"]
+[ext_resource type="PackedScene" uid="uid://bam7avfm70fo0" path="res://Scenes/Setup/Loading/LoadingCircle.tscn" id="3_0rn62"]
+[ext_resource type="Script" uid="uid://ciueivr4xse6r" path="res://Scripts/Setup/Loading/LoadIntoLoginOrSetup.gd" id="4_bpkmv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sq45"]
 cull_mode = 1

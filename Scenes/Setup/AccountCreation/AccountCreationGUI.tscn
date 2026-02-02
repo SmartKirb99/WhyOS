@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bu41mb1104xfe"]
+
+[node name="AccountCreationGui" type="Control" unique_id=1034973352]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UsernameLine" type="LineEdit" parent="." unique_id=585298472]
+layout_mode = 0
+offset_top = 293.0
+offset_right = 645.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Username"
+
+[node name="PasswordLine" type="LineEdit" parent="." unique_id=1355512027]
+layout_mode = 0
+offset_top = 396.0
+offset_right = 645.0
+offset_bottom = 492.0
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Password"
+secret = true
+
+[node name="ConfirmPasswordLine" type="LineEdit" parent="." unique_id=1375709175]
+layout_mode = 0
+offset_top = 566.0
+offset_right = 645.0
+offset_bottom = 662.0
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Confirm Password"
+secret = true
+
+[node name="Explanation" type="RichTextLabel" parent="." unique_id=707291492]
+layout_mode = 0
+offset_right = 1926.0
+offset_bottom = 268.0
+theme_override_font_sizes/normal_font_size = 64
+text = "Welcome to WhyOS, the potentially beloved sequel to PainOS. You'll really only see this when you first start, but also when you accidentally delete your User Folder."
+
+[node name="Button" type="Button" parent="." unique_id=1263065552]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 985.0
+offset_right = 1189.0
+offset_bottom = 1081.0
+theme_override_font_sizes/font_size = 64
+text = "Create Account"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=802670498]
+layout_mode = 0
+offset_left = 1167.0
+offset_top = 302.0
+offset_right = 1905.0
+offset_bottom = 717.0
+theme_override_font_sizes/normal_font_size = 32
+text = "In terms of boring Password Stuff, it's recommended to have a password with symbols, numbers, and variation between capital and lowercase letters, but I mean hey, nobody is stopping you from having a password of 1 digit, or the 67 stuff that nobody likes. Anyways, the password is up to you. And besides, this is more of a joke OS, similar to PainOS"
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1396508266]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 696.0
+offset_right = 518.0
+offset_bottom = 792.0
+theme_override_font_sizes/font_size = 64
+text = "Show Pasword"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=775789559]
+z_index = -1
+layout_mode = 0
+offset_left = -73.0
+offset_top = -35.0
+offset_right = 2016.0
+offset_bottom = 1198.0
+color = Color(0, 0, 0.3019608, 1)

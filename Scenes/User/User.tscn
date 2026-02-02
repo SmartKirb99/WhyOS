@@ -2,5 +2,30 @@
 
 [ext_resource type="Script" uid="uid://cp1ecdkbnli6b" path="res://Scripts/User/CameraMovement.gd" id="1_npl8l"]
 
-[node name="Camera3D" type="Camera3D" unique_id=2026353731]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_npl8l"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_npl8l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u75wt"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=931703688]
+
+[node name="BodyCollision" type="CollisionShape3D" parent="." unique_id=878979499]
+shape = SubResource("CapsuleShape3D_npl8l")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2026353731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31050286, -0.18457635)
 script = ExtResource("1_npl8l")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=99383161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04431367, 0.18457635)
+target_position = Vector3(0, 0, -2)
+collision_mask = 2
+debug_shape_custom_color = Color(0, 0, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/RayCast3D" unique_id=632905908]
+transform = Transform3D(0.25, 0, 0, 0, -5.253484e-08, 0.25000003, 0, -1.2018571, -1.0927848e-08, 0, 0, -0.8119583)
+mesh = SubResource("CylinderMesh_npl8l")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=416524673]
+mesh = SubResource("CapsuleMesh_u75wt")
