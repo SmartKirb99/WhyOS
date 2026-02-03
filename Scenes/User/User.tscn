@@ -1,31 +1,90 @@
 [gd_scene format=3 uid="uid://dhb16d23exubg"]
 
-[ext_resource type="Script" uid="uid://cp1ecdkbnli6b" path="res://Scripts/User/CameraMovement.gd" id="1_npl8l"]
+[ext_resource type="Script" uid="uid://ceoyci086u3g8" path="res://Scripts/User/User.gd" id="1_frh12"]
+[ext_resource type="Texture2D" uid="uid://2ad6xoyr48ai" path="res://Assets/Textures/raycast.png" id="2_u75wt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_npl8l"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frh12"]
+cull_mode = 2
+albedo_texture = ExtResource("2_u75wt")
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_npl8l"]
+material = SubResource("StandardMaterial3D_frh12")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fp5e"]
+albedo_color = Color(0, 0.4627451, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_u75wt"]
+material = SubResource("StandardMaterial3D_0fp5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghs06"]
+albedo_color = Color(0, 0.4627451, 0, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u75wt"]
+material = SubResource("StandardMaterial3D_ghs06")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u75wt"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_frh12"]
+material = SubResource("StandardMaterial3D_u75wt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upttd"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0fp5e"]
+material = SubResource("StandardMaterial3D_upttd")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=931703688]
+script = ExtResource("1_frh12")
 
 [node name="BodyCollision" type="CollisionShape3D" parent="." unique_id=878979499]
 shape = SubResource("CapsuleShape3D_npl8l")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2026353731]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31050286, -0.18457635)
-script = ExtResource("1_npl8l")
+cull_mask = 1048571
+current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=99383161]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04431367, 0.18457635)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.332)
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 debug_shape_custom_color = Color(0, 0, 1, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/RayCast3D" unique_id=632905908]
-transform = Transform3D(0.25, 0, 0, 0, -5.253484e-08, 0.25000003, 0, -1.2018571, -1.0927848e-08, 0, 0, -0.8119583)
+transform = Transform3D(0.03443703, 0, 0, 0, -2.2122e-08, 0.050000004, 0, -0.5060923, -2.1855695e-09, 0, 0, -0.50140345)
+visible = false
 mesh = SubResource("CylinderMesh_npl8l")
+
+[node name="Hand" type="MeshInstance3D" parent="Camera3D" unique_id=794868731]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -1.0126625)
+layers = 4
+mesh = SubResource("SphereMesh_u75wt")
+
+[node name="Hand2" type="MeshInstance3D" parent="Camera3D" unique_id=889656737]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.7032486, -0.3203516, -0.15134166)
+mesh = SubResource("SphereMesh_u75wt")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=416524673]
 mesh = SubResource("CapsuleMesh_u75wt")
+
+[node name="Eyes" type="MeshInstance3D" parent="." unique_id=1227453626]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.14875704, 0.68880194, -0.42782637)
+layers = 4
+mesh = SubResource("SphereMesh_frh12")
+
+[node name="Eyes2" type="MeshInstance3D" parent="." unique_id=1099876287]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.10993916, 0.68880194, -0.42782637)
+layers = 4
+mesh = SubResource("SphereMesh_frh12")
+
+[node name="Pupils2" type="MeshInstance3D" parent="." unique_id=1081163621]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.14875704, 0.68880194, -0.49230462)
+layers = 4
+mesh = SubResource("SphereMesh_0fp5e")
+
+[node name="Pupils" type="MeshInstance3D" parent="." unique_id=1171409331]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.11240375, 0.68880194, -0.49230462)
+layers = 4
+mesh = SubResource("SphereMesh_0fp5e")

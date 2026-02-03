@@ -25,7 +25,7 @@ window/size/mode=4
 [file_customization]
 
 folder_colors={
-"res://Fonts/": "yellow",
+"res://Assets/Fonts/": "yellow",
 "res://Scenes/": "red",
 "res://Scripts/": "orange"
 }

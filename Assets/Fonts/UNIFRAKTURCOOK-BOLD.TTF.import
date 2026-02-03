@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b12hmkpmvyd32"
-path="res://.godot/imported/UNIFRAKTURCOOK-BOLD.TTF-23450230ec4748ed352f402ce5e39527.fontdata"
+path="res://.godot/imported/UNIFRAKTURCOOK-BOLD.TTF-1cdf3af9443de6747be9e05b302d7660.fontdata"
 
 [deps]
 
-source_file="res://Fonts/UNIFRAKTURCOOK-BOLD.TTF"
-dest_files=["res://.godot/imported/UNIFRAKTURCOOK-BOLD.TTF-23450230ec4748ed352f402ce5e39527.fontdata"]
+source_file="res://Assets/Fonts/UNIFRAKTURCOOK-BOLD.TTF"
+dest_files=["res://.godot/imported/UNIFRAKTURCOOK-BOLD.TTF-1cdf3af9443de6747be9e05b302d7660.fontdata"]
 
 [params]
 
